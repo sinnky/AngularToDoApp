@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularToDoApp": {
+    "Test2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularToDoApp",
+            "outputPath": "dist/Test2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -63,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularToDoApp:build"
+            "browserTarget": "Test2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularToDoApp:build:production"
+              "browserTarget": "Test2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularToDoApp:build"
+            "browserTarget": "Test2:build"
           }
         },
         "test": {
@@ -111,15 +112,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularToDoApp:serve"
+            "devServerTarget": "Test2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularToDoApp:serve:production"
+              "devServerTarget": "Test2:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "AngularToDoApp"
+  "defaultProject": "Test2"
 }
